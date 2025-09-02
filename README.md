@@ -53,8 +53,7 @@ This project involves designing a relational database system for an Airbnb-like 
 
 ---
 
-## 📝 Tools
-ERD was designed using [Draw.io](https://draw.io). Diagram file is included in this folder.
+
 
 ---
 
