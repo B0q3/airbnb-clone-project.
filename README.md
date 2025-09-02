@@ -17,4 +17,21 @@ It focuses on **backend systems, database design, API development, and applicati
 - **GraphQL** – API query language for efficient client-server communication.  
 - **Docker** – Containerization for easy deployment.  
 - **GitHub Actions** – CI/CD automation.  
--
+-## Team Roles and Responsibilities
+
+For this project, several roles are essential to ensure successful collaboration and delivery:
+
+- **Backend Developer**  
+  Responsible for building and maintaining the server-side logic, APIs, and integration with the database. Ensures the backend is efficient, secure, and scalable.
+
+- **Database Administrator (DBA)**  
+  Designs, manages, and optimizes the relational database. Ensures data integrity, backups, and performance tuning.
+
+- **DevOps Engineer**  
+  Handles deployment automation, CI/CD pipeline setup, containerization (Docker), and monitors infrastructure performance.
+
+- **Quality Assurance (QA) Engineer**  
+  Tests the system for bugs, security issues, and ensures that new features meet the requirements before release.
+
+- **Project Manager**  
+  Coordinates the team, assigns tasks, monitors progress, and ensures the project is delivered on time.
