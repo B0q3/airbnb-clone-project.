@@ -20,6 +20,24 @@ It focuses on **backend systems, database design, API development, and applicati
 -## Team Roles and Responsibilities
 
 For this project, several roles are essential to ensure successful collaboration and delivery:
+## Technology Stack Overview
+
+This project uses a modern backend technology stack to ensure scalability, security, and performance:
+
+- **Django**  
+  A high-level Python web framework used to build robust backend logic and RESTful APIs efficiently.
+
+- **PostgreSQL / MySQL**  
+  Relational database systems used to store structured data such as users, properties, bookings, reviews, and payments.
+
+- **GraphQL**  
+  A query language for APIs that allows clients to request exactly the data they need, improving performance and flexibility.
+
+- **Docker**  
+  Provides containerization to package applications and dependencies, ensuring consistency across different environments.
+
+- **GitHub Actions**  
+  Enables CI/CD automation by running tests, building, and deploying the project automatically on each commit.
 
 - **Backend Developer**  
   Responsible for building and maintaining the server-side logic, APIs, and integration with the database. Ensures the backend is efficient, secure, and scalable.
