@@ -1,55 +1,57 @@
-# Airbnb Clone Project (StayBackend)
+Airbnb Clone Project – Backend (StayBackend)
+📌 Project Overview
+The Airbnb Clone Project is a backend-focused application designed to simulate a real-world booking platform like Airbnb.
+The goal is to design, implement, and secure a scalable backend system with modern tools and practices.
 
-## Project Overview
-This project is a backend implementation of an **Airbnb Clone**, designed to simulate a real-world booking platform.  
-It focuses on **backend systems, database design, API development, and application security**, with the goal of building a scalable and secure web application.
+🎯 Goals:
+Build a scalable backend system using Django.
+Design a relational database for users, properties, bookings, reviews, and payments.
+Implement secure APIs for managing platform features.
+Automate deployment with CI/CD pipelines.
+Practice team collaboration with GitHub.
+👥 Team Roles
+Backend Developer: Implements the application logic, REST/GraphQL APIs, and integrates database queries.
+Database Administrator (DBA): Designs, maintains, and optimizes the database schema (PostgreSQL/MySQL).
+DevOps Engineer: Manages CI/CD pipelines, Docker containers, and deployment environments.
+Project Manager: Oversees project progress, ensures deadlines are met, and facilitates collaboration.
+QA Engineer: Tests API endpoints, verifies data integrity, and ensures feature reliability.
+🛠 Technology Stack
+Django – Python web framework used to build RESTful/GraphQL APIs.
+PostgreSQL/MySQL – Relational database for storing users, bookings, and transactions.
+GraphQL – Provides flexible querying for frontend applications.
+Docker – Containerization for consistent environment setup.
+GitHub Actions – CI/CD automation for testing and deployment.
+NGINX/Gunicorn – Web server & WSGI server for production deployment.
+🗄 Database Design
+Entities & relationships:
 
-## Project Goals
-- Understand and implement modern backend architecture.  
-- Design and document relational database structures.  
-- Develop RESTful and GraphQL APIs for user interaction.  
-- Apply robust **security measures** to protect sensitive data.  
-- Automate deployment pipelines using CI/CD practices.  
-
-## Technology Stack
-- **Django** – Web framework for backend development and APIs.  
-- **PostgreSQL/MySQL** – Relational database system.  
-- **GraphQL** – API query language for efficient client-server communication.  
-- **Docker** – Containerization for easy deployment.  
-- **GitHub Actions** – CI/CD automation.  
--## Team Roles and Responsibilities
-
-For this project, several roles are essential to ensure successful collaboration and delivery:
-## Technology Stack Overview
-
-This project uses a modern backend technology stack to ensure scalability, security, and performance:
-
-- **Django**  
-  A high-level Python web framework used to build robust backend logic and RESTful APIs efficiently.
-
-- **PostgreSQL / MySQL**  
-  Relational database systems used to store structured data such as users, properties, bookings, reviews, and payments.
-
-- **GraphQL**  
-  A query language for APIs that allows clients to request exactly the data they need, improving performance and flexibility.
-
-- **Docker**  
-  Provides containerization to package applications and dependencies, ensuring consistency across different environments.
-
-- **GitHub Actions**  
-  Enables CI/CD automation by running tests, building, and deploying the project automatically on each commit.
-
-- **Backend Developer**  
-  Responsible for building and maintaining the server-side logic, APIs, and integration with the database. Ensures the backend is efficient, secure, and scalable.
-
-- **Database Administrator (DBA)**  
-  Designs, manages, and optimizes the relational database. Ensures data integrity, backups, and performance tuning.
-
-- **DevOps Engineer**  
-  Handles deployment automation, CI/CD pipeline setup, containerization (Docker), and monitors infrastructure performance.
-
-- **Quality Assurance (QA) Engineer**  
-  Tests the system for bugs, security issues, and ensures that new features meet the requirements before release.
-
-- **Project Manager**  
-  Coordinates the team, assigns tasks, monitors progress, and ensures the project is delivered on time.
+User → (id, name, email, password_hash, role)
+Property → (id, owner_id [FK User], title, description, price, location)
+Booking → (id, user_id [FK User], property_id [FK Property], check_in, check_out, status)
+Review → (id, user_id [FK User], property_id [FK Property], rating, comment)
+Payment → (id, booking_id [FK Booking], amount, status, payment_method)
+Relationships:
+A user can own multiple properties.
+A property can have many bookings and reviews.
+A booking belongs to one property and one user.
+A payment is linked to a booking.
+✨ Feature Breakdown
+User Management – Registration, authentication, profile management.
+Property Management – Owners can list, update, and remove properties.
+Booking System – Users can search, book, and cancel reservations.
+Review System – Users can leave ratings and feedback on properties.
+Payment Integration – Secure online payments for confirmed bookings.
+Search & Filters – Find properties by location, price, date, or features.
+🔐 API Security
+Authentication: JWT-based login system to verify user identity.
+Authorization: Role-based access control (only property owners can edit their listings).
+Data Validation: Prevent SQL injection and invalid inputs.
+Rate Limiting: Protect against brute force attacks.
+Secure Payments: Encrypt sensitive data and enforce HTTPS.
+⚙ CI/CD Pipeline
+Continuous Integration (CI) – Automated tests run on every push via GitHub Actions.
+Continuous Deployment (CD) – Code is automatically deployed to staging/production.
+Tools:
+GitHub Actions – workflow automation.
+Docker – build and deploy containers.
+NGINX – reverse proxy for serving APIs securely.
